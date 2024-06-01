@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth or Dare</title>
+    <link rel="stylesheet" href="/css/games/truth-or-dare.css">
+</head>
+<body>
+    <header>
+        <h1>Truth or Dare</h1>
+    </header>
+    <main>
+        <div id="selection-screen" class="container">
+            <button class="btn truth">Truth</button>
+            <span class="or">or</span>
+            <button class="btn dare">Dare</button>
+        </div>
+        <div id="content-screen" class="hidden">
+            <div id="truth-content" class="content hidden">
+                <p>Đây là nội dung của Truth.</p>
+                <button class="btn done">Done</button>
+            </div>
+            <div id="dare-content" class="content hidden">
+                <p>Đây là nội dung của Dare.</p>
+                <button class="btn done">Done</button>
+            </div>
+        </div>
+    </main>
+    <script src="/js/games/truth-or-dare.js"></script>
+</body>
+</html>

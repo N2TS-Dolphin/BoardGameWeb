@@ -1,0 +1,61 @@
+/* Reset các thuộc tính mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Định dạng cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Định dạng cho tiêu đề */
+header {
+    background-color: #282c34;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Định dạng cho phần chứa các game item */
+.game-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Định dạng cho từng game item */
+.game-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.game-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.game-item p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Hiệu ứng khi hover vào item */
+.game-item:hover {
+    transform: scale(1.05);
+}
