@@ -5,7 +5,7 @@ const Truth = require('../../models/truth');
 const Dare = require('../../models/dare');
 
 router.get('/', (req, res) => {
-    res.render('games/index');
+    res.render('games/truth-or-dare');
 });
 
 router.get('/truth', async (req, res) => {

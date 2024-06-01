@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     truthButton.addEventListener("click", async function() {
         try {
-            const response = await fetch('/truth');
+            const response = await fetch('/games/truth-or-dare/truth');
             const data = await response.json();
-            truthContent.querySelector('p').textContent = data.content;
+            truthContent.querySelector('p').textContent = data.question;
             selectionScreen.classList.add("hidden");
             contentScreen.classList.remove("hidden");
             truthContent.classList.remove("hidden");
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     dareButton.addEventListener("click", async function() {
         try {
-            const response = await fetch('/dare');
+            const response = await fetch('/games/truth-or-dare/dare');
             const data = await response.json();
-            dareContent.querySelector('p').textContent = data.content;
+            dareContent.querySelector('p').textContent = data.question;
             selectionScreen.classList.add("hidden");
             contentScreen.classList.remove("hidden");
             dareContent.classList.remove("hidden");

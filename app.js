@@ -6,18 +6,20 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 
 var homeRouter = require('./routes/home/index');
-var gamesRouter = require('./routes/games/index');
+var truthordareRouter = require('./routes/games/index');
 
 var app = express();
 var port = 8000;
 
 // Set up mongoDB
-mongoose.connect('mongodb+srv://sonsung2003:dolphin01296773776@webdata.ilp58h7.mongodb.net/?retryWrites=true&w=majority&appName=WebData', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
+mongoose.connect('mongodb+srv://sonsung2003:dolphin01296773776@webdata.ilp58h7.mongodb.net/truthordare?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
     console.log('Connected to MongoDB');
-}).catch(err => {
+})
+.catch(err => {
     console.error('Error connecting to MongoDB', err);
 });
 
@@ -32,7 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
-app.use('/games', gamesRouter);
+app.use('/games/truth-or-dare', truthordareRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

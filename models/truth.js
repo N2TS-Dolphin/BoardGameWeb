@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const truthSchema = new mongoose.Schema({
-    content: {
+    question: {
         type: String,
         required: true
     }
